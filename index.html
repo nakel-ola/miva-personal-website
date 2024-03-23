@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Steve jobs</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <!-- form -->
+
+    <nav class="navbar">
+      <h1 class="">Logo.</h1>
+
+      <ul>
+        <li class="navbar-link-active">
+          <a href="/" class="">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="form-container">
+      <section class="form-card">
+        <div class="form-header">
+          <h2 class="">Application form</h2>
+          <p class="">Fill the form if you want to join the team</p>
+        </div>
+
+        <form onsubmit="handleSubmit(event)" class="form-inputs">
+          <div class="form-input-group">
+            <div class="form-input-card">
+              <label for="firstName">First name</label>
+
+              <input id="input-chnage" type="text" name="firstName" class="" />
+            </div>
+
+            <div class="form-input-card">
+              <label for="lastName">Last name</label>
+
+              <input
+                type="text"
+                id="lastName"
+                onchange="handleChange(event)"
+                class=""
+              />
+            </div>
+          </div>
+
+          <div class="form-input-card">
+            <label for="email">Email</label>
+
+            <input
+              type="email"
+              name="email"
+              onchange="handleChange(event)"
+              class=""
+            />
+          </div>
+          <div class="form-input-card">
+            <label for="phoneNumber">Phone number</label>
+
+            <input
+              type="tel"
+              name="phoneNumber"
+              onchange="handleChange(event)"
+              class=""
+            />
+          </div>
+
+          <div class="form-input-card">
+            <label for="upload">Resume</label>
+
+            <label for="input-file-upload">
+              <div
+                id="form-upload"
+                ondragover="handleDragOver(event)"
+                ondragleave="handleDragLeave(event)"
+                ondrop="handleDrop(event)"
+                accept=".pdf"
+                class="form-upload"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="M440-320v-326L336-542l-56-58 200-200 200 200-56 58-104-104v326h-80ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <p className="">
+                  <strong className=""> Upload or drop </strong>
+                  your file here
+                </p>
+                <input
+                  type="file"
+                  id="input-file-upload"
+                  className="form-upload-input"
+                  hidden
+                />
+              </div>
+            </label>
+          </div>
+
+          <button type="submit" class="form-button">Submit Application</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
